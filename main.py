@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 from bottle import route, run, template, request, post, get, response
 import simplejson as json
 
