@@ -3,15 +3,9 @@ from bottle import route, run, template, request, post, get, response
 import MySQLdb
 import simplejson as json
 
-'''
-Place this file in Library/WebServer/Documents and execute it there.
-This automatically sets up a web server that listens on port 8080.
-'''
-
 @route('/hello/<name>')
 def index(name):
     return template('<b>Hello {{name}}</b>!', name=name)
-
 
 @get('/trails/account')
 def get_user():
@@ -54,7 +48,6 @@ def add_user():
     cursor.execute('insert into ACCOUNT (' + keys + ') values (' + values + ');')
     trails_db.commit()
 
-
 @post('/trails/api/1/activity')
 def create_activity():
     
@@ -75,7 +68,6 @@ def create_activity():
     print 'insert into ACTIVITY (' + keys + ') values (' + values + ');'
     cursor.execute('insert into ACTIVITY (' + keys + ') values (' + values + ');')
     trails_db.commit()
-
 
 trails_db = MySQLdb.connect(host="localhost", user="root", passwd="", db="trails")
 cursor = trails_db.cursor()
