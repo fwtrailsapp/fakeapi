@@ -1,6 +1,5 @@
 #!/usr/bin/python
 from bottle import route, run, template, request, post, get, response
-import MySQLdb
 import simplejson as json
 
 @route('/hello/<name>')
