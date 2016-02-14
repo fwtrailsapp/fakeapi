@@ -14,10 +14,20 @@ def login():
         response.status = 400
         return
 
+@get('/trails/api/1/achievement')
+def get_achievement():
+    if not has_auth(request):
+        response.status = 401
+        return
+    return {"achievements" :["the","internet","of","things"]}
+
 def check_required_keys(dict, keys):
     for k in keys:
         if not k in dict:
             return False
     return True
+
+def has_auth(request):
+    return 'authtoken' in request.headers
 
 run(host='localhost', port=8080)
