@@ -32,6 +32,10 @@ If a request parameter has "nullable" in the documentation, the value can be set
   [1]: https://en.wikipedia.org/wiki/ISO_8601
   [2]: http://www.json.org/
 
+## Data Types
+
+* `ExerciseType` can be `bike` or `run` or `walk`.
+
 # API SPEC v1
 
 ## POST /trails/api/1/login
@@ -90,6 +94,24 @@ Modifies the specified fields of the user’s account.
 * weight - float, pounds, nullable
 * sex - string, "male" or "female", nullable
 * height - float, inches, nullable
+
+### Response
+
+* HTTP 200 - OK
+
+## POST /trails/api/1/activity
+
+Store a new activity, after it has been completed.
+
+### Parameters
+
+* time_started - string, ISO 8601 date
+* time_ended - string, ISO 8601 date
+* mileage - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+* top_speed - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+* calories_burned - float
+* exercise_type - string, an ExcerciseType datatype
+* path - a magical string, **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
 
 ### Response
 
