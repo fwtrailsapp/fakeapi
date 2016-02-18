@@ -36,7 +36,7 @@ If a request parameter has "nullable" in the documentation, the value can be set
 
 ## POST /trails/api/1/login
 
-Attempts login by authenticating username and password. For valid username/password combinations, the server returns an authorization token that is necessary for all subsequent API calls. The authorization token will be used both for authorization and for identification. See the overview section for how to embed it.
+Attempts login by authenticating username and password. For valid username/password combinations, the server returns an authorization token that is necessary for all subsequent API calls. The authorization token will be used both for authorization and for identification. See the overview section for how to include it.
 
 ### Params
 
@@ -67,4 +67,30 @@ This request creates a new account; it does not require an authtoken. You will l
 * HTTP 200 - Account created successfully
 * HTTP 401 - Email or password was rejected or already in use
 
-## 
+## GET /trails/api/1/account
+
+Requests the account information of the user. The user's identification is stored within **authtoken**.
+
+### Responses
+
+* HTTP 200
+  * name - string, 
+  * dob - string, ISO 8601 date
+  * weight - float, pounds
+  * sex - string, "male" or "female"
+  * height - float, inches
+
+## POST /trails/api/1/account/edit
+
+Modifies the specified fields of the user’s account.
+
+### Parameters
+
+* dob - string, ISO 8601 date, nullable
+* weight - float, pounds, nullable
+* sex - string, "male" or "female", nullable
+* height - float, inches, nullable
+
+### Response
+
+* HTTP 200 - OK
