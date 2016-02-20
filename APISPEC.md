@@ -97,7 +97,7 @@ Modifies the specified fields of the user’s account.
 
 ### Response
 
-* HTTP 200 - OK
+* HTTP 200
 
 ## POST /trails/api/1/activity
 
@@ -115,4 +115,76 @@ Store a new activity, after it has been completed.
 
 ### Response
 
-* HTTP 200 - OK
+* HTTP 200
+
+## GET /trails/api/1/activity
+
+Returns all of the activities for the current user.
+
+### Response
+
+* HTTP 200
+  * array:
+    * id - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+    * time_started - string, ISO 8601 date
+    * time_ended - string, ISO 8601 date
+    * mileage - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+    * top_speed - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+    * calories_burned - float
+    * exercise_type - string, an ExcerciseType datatype
+    * path - a magical string, **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+
+## GET /trails/api/1/activity/{id}
+
+Gets a single activity for the current user with the specified id. 
+
+### Response
+
+* HTTP 200
+  * id - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+  * time_started - string, ISO 8601 date
+  * time_ended - string, ISO 8601 date
+  * mileage - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+  * top_speed - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+  * calories_burned - float
+  * exercise_type - string, an ExcerciseType datatype
+  * path - a magical string, **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+
+## GET /trails/api/1/achievement
+
+Returns all of the achievements. The earned date for an achievement will be “null” if the current user has not earned it.
+
+### Response
+
+* HTTP 200
+  * array:
+    * id - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+    * description - string
+    * date_earned - ISO 8601 date, null if not earned
+
+## GET /trails/api/1/statistics
+
+Returns the aggregate of all of the activities for the user.
+
+### Response
+
+* HTTP 200
+  * account_created_at - ISO 8601 date, time the user opened the account
+  * total_duration - [ISO 8601 duration][1], amount of time user has spent in activities
+  * total_distance - float, in miles, distance traveled in activities
+  * total_calories - float, calories burned in activities
+  * total_achievements - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+
+  [1]: https://en.wikipedia.org/wiki/ISO_8601#Durations
+
+## GET /trails/api/1/statistics/{exercise_type}
+
+Returns the aggregate of all the activities for the user for the specified exercise type, where
+"exercise_type" is one of the possible exercise types (see overview section).
+
+### Response
+
+* HTTP 200
+  * total_duration - [ISO 8601 duration][3], amount of time user has spent in activities of this type
+  * total_distance - float, in miles, distance traveled in activities of this type
+  * total_calories - float, calories burned in activities of this type
