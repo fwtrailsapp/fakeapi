@@ -79,7 +79,7 @@ Requests the account information of the user. The user's identification is store
 ### Responses
 
 * HTTP 200
-  * dob - string, ISO 8601 date, nullable
+  * dob - int, birth year, nullable
   * weight - float, pounds, nullable
   * sex - string, "male" or "female", nullable
   * height - float, inches, nullable
@@ -90,7 +90,7 @@ Modifies the specified fields of the user’s account.
 
 ### Parameters
 
-* dob - string, ISO 8601 date, nullable
+* dob - int, birth year, nullable
 * weight - float, pounds, nullable
 * sex - string, "male" or "female", nullable
 * height - float, inches, nullable
@@ -165,6 +165,8 @@ Returns the aggregate of all the activities for the user for the specified exerc
 ### Response
 
 * HTTP 200
-  * total_duration - [ISO 8601 duration][3], amount of time user has spent in activities of this type
+  * total_duration - [ISO 8601 duration][1], amount of time user has spent in activities of this type
   * total_distance - float, in miles, distance traveled in activities of this type
   * total_calories - float, calories burned in activities of this type
+
+[1]: https://en.wikipedia.org/wiki/ISO_8601#Durations
