@@ -153,7 +153,7 @@ Returns the aggregate of all of the activities for the user.
   * total_duration - [ISO 8601 duration][1], amount of time user has spent in activities
   * total_distance - float, in miles, distance traveled in activities
   * total_calories - float, calories burned in activities
-  * total_achievements - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+  * total_achievements - int, number of achieved
 
   [1]: https://en.wikipedia.org/wiki/ISO_8601#Durations
 
