@@ -10,9 +10,9 @@ After **POST login**, the server will send back an auth token. Clients should se
 
 ## Auth Considerations
 
-The authorization tokens will most likely (depending on our implementation) come with some sort of expiration time. Once the tokens are expired, new tokens will need to be requested by the application. The solution to this problem is to save the email/password combination that the user logged in with initially on the device, and simply - in the background - use those credentials to re-request new auth tokens by sending new **POST login** requests. 
+The authorization tokens will most likely (depending on our implementation) come with some sort of expiration time. Once the tokens are expired, new tokens will need to be requested by the application. The solution to this problem is to save the username/password combination that the user logged in with initially on the device, and simply - in the background - use those credentials to re-request new auth tokens by sending new **POST login** requests. 
 
-Users will have an email/password auto-fill option for the login screen (e.g. a ‘Remember Me’ checkbox). If this option is selected, the email/password combination will be permanently stored on the device such that the email and password fields will be filled automatically when the screen is displayed. If the box is unchecked, the email/password combination will be deleted from the device once the application is closed.
+Users will have an username/password auto-fill option for the login screen (e.g. a ‘Remember Me’ checkbox). If this option is selected, the username/password combination will be permanently stored on the device such that the username and password fields will be filled automatically when the screen is displayed. If the box is unchecked, the username/password combination will be deleted from the device once the application is closed.
 
 ## HTTP Status Codes
 
@@ -44,14 +44,14 @@ Attempts login by authenticating username and password. For valid username/passw
 
 ### Params
 
-* email - string
+* username - string
 * password - string
 
 ### Responses
 
 * HTTP 200 - Logged in successfully
   * authtoken - string, a long hexadecimal string to identify this user’s requests
-* HTTP 401 - Incorrect email/password
+* HTTP 401 - Incorrect username/password
 
 ## POST /trails/api/1/account/create
 
@@ -59,7 +59,7 @@ This request creates a new account; it does not require an authtoken. You will l
 
 ### Params
 
-* email - string
+* username - string
 * password - string
 * dob - string, ISO 8601 date, nullable
 * weight - float, pounds, nullable
@@ -69,7 +69,7 @@ This request creates a new account; it does not require an authtoken. You will l
 ### Responses
 
 * HTTP 200 - Account created successfully
-* HTTP 401 - Email or password was rejected or already in use
+* HTTP 401 - Username or password was rejected or already in use
 
 ## GET /trails/api/1/account
 
