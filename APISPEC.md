@@ -35,6 +35,7 @@ If a request parameter has "nullable" in the documentation, the value can be set
 ## Data Types
 
 * `ExerciseType` can be `bike` or `run` or `walk`.
+* `LineString` is a string where a point is float lat and float long, separated by a comma, and each point is separated with by a space. Example: `20.3323,70.4531 21.3323,71.4531 22.3323,72.4531`
 
 # API SPEC v1
 
@@ -110,7 +111,7 @@ Store a new activity, after it has been completed.
 * top_speed - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
 * calories_burned - float
 * exercise_type - string, an ExcerciseType datatype
-* path - a magical string, **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+* path - array of linestrings
 
 ### Response
 
