@@ -138,7 +138,7 @@ Returns all of the achievements. The earned date for an achievement will be “n
 
 * HTTP 200
   * array:
-    * id - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+    * name - string
     * description - string
     * date_earned - ISO 8601 date, null if not earned
 
