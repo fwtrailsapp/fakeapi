@@ -118,17 +118,15 @@ Store a new activity, after it has been completed.
 
 ## GET /trails/api/1/activity
 
-Returns all of the activities for the current user. Does not include paths because that's a lot of data. Use /activity/{id} to get the path.
+Returns all of the activities for the current user. Does not include paths.
 
 ### Response
 
 * HTTP 200
   * array:
-    * id - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
     * time_started - string, ISO 8601 date
     * time_ended - string, ISO 8601 date
-    * mileage - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
-    * top_speed - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+    * mileage - float
     * calories_burned - float
     * exercise_type - string, an ExcerciseType datatype
 
