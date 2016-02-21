@@ -61,7 +61,7 @@ This request creates a new account; it does not require an authtoken. You will l
 
 * username - string
 * password - string
-* dob - string, ISO 8601 date, nullable
+* dob - int, birth year, nullable
 * weight - float, pounds, nullable
 * sex - string, "male" or "female", nullable
 * height - float, inches, nullable
