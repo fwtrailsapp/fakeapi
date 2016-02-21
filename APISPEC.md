@@ -107,8 +107,7 @@ Store a new activity, after it has been completed.
 
 * time_started - string, ISO 8601 date
 * time_ended - string, ISO 8601 date
-* mileage - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
-* top_speed - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
+* mileage - float
 * calories_burned - float
 * exercise_type - string, an ExcerciseType datatype
 * path - array of linestrings, because an activity can be paused
