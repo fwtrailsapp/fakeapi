@@ -78,11 +78,10 @@ Requests the account information of the user. The user's identification is store
 ### Responses
 
 * HTTP 200
-  * name - string, 
-  * dob - string, ISO 8601 date
-  * weight - float, pounds
-  * sex - string, "male" or "female"
-  * height - float, inches
+  * dob - string, ISO 8601 date, nullable
+  * weight - float, pounds, nullable
+  * sex - string, "male" or "female", nullable
+  * height - float, inches, nullable
 
 ## POST /trails/api/1/account/edit
 
