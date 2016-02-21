@@ -111,7 +111,7 @@ Store a new activity, after it has been completed.
 * top_speed - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
 * calories_burned - float
 * exercise_type - string, an ExcerciseType datatype
-* path - array of linestrings
+* path - array of linestrings, because an activity can be paused
 
 ### Response
 
@@ -132,22 +132,6 @@ Returns all of the activities for the current user. Does not include paths becau
     * top_speed - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
     * calories_burned - float
     * exercise_type - string, an ExcerciseType datatype
-
-## GET /trails/api/1/activity/{id}
-
-Gets a single activity for the current user with the specified id. 
-
-### Response
-
-* HTTP 200
-  * id - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
-  * time_started - string, ISO 8601 date
-  * time_ended - string, ISO 8601 date
-  * mileage - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
-  * top_speed - **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
-  * calories_burned - float
-  * exercise_type - string, an ExcerciseType datatype
-  * path - a magical string, **TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**
 
 ## GET /trails/api/1/achievement
 
