@@ -1,4 +1,4 @@
-# City Rivergreenways API (CRAPI) Overview
+# City of Fort Wayne Rivergreenways API (CRAPI) Overview
 
 ## POST Requests
 
