@@ -105,8 +105,8 @@ Store a new activity, after it has been completed.
 
 ### Parameters
 
-* time_started - string, ISO 8601 date
-* time_ended - string, ISO 8601 date
+* time_started - string, ISO 8601 date("yyyy-MM-dd'T'HH:mm'Z'")
+* duration - string, ISO 8601 date('HH:mm'Z')
 * mileage - float
 * calories_burned - float
 * exercise_type - string, an ExcerciseType datatype
