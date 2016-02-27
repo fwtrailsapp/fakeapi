@@ -124,8 +124,8 @@ Returns all of the activities for the current user. Does not include paths.
 
 * HTTP 200
   * array:
-    * time_started - string, ISO 8601 date
-    * time_ended - string, ISO 8601 date
+    * time_started - string, ISO 8601 date("yyyy-MM-dd'T'HH:mm'Z'")
+    * duration - string, ISO 8601 date('HH:mm'Z')
     * mileage - float
     * calories_burned - float
     * exercise_type - string, an ExcerciseType datatype
