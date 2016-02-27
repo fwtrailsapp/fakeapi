@@ -8,11 +8,14 @@ def index(name):
 
 @post('/trails/api/1/login')
 def login():
-    if check_required_keys(request.json, ['email','password']):
-        return {'authtoken': 'qwertyuiopasdfghjkl'}
-    else:
+    print(request.json)
+    if not check_required_keys(request.json, ['username','password']):
         response.status = 400
         return
+    if not request.json["password"] == "correctpass":
+        response.status = 401
+        return
+    return {'authtoken': 'qwertyuiopasdfghjkl'}
 
 @get('/trails/api/1/achievement')
 def get_achievement():
