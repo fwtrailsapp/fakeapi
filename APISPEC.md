@@ -108,7 +108,7 @@ Store a new activity, after it has been completed.
 * time_started - string, ISO 8601 date("yyyy-MM-dd'T'HH:mm'Z'")
 * duration - string, ISO 8601 date('HH:mm'Z')
 * mileage - float
-* calories_burned - float
+* calories_burned - int
 * exercise_type - string, an ExcerciseType datatype
 * path - array of linestrings, because an activity can be paused
 
@@ -127,7 +127,7 @@ Returns all of the activities for the current user. Does not include paths.
     * time_started - string, ISO 8601 date("yyyy-MM-dd'T'HH:mm'Z'")
     * duration - string, ISO 8601 date('HH:mm'Z')
     * mileage - float
-    * calories_burned - float
+    * calories_burned - int
     * exercise_type - string, an ExcerciseType datatype
 
 ## GET /trails/api/1/achievement
@@ -152,7 +152,7 @@ Returns the aggregate of all of the activities for the user.
   * account_created_at - ISO 8601 date, time the user opened the account
   * total_duration - [ISO 8601 duration][1], amount of time user has spent in activities
   * total_distance - float, in miles, distance traveled in activities
-  * total_calories - float, calories burned in activities
+  * total_calories - int, calories burned in activities
   * total_achievements - int, number of achieved
 
   [1]: https://en.wikipedia.org/wiki/ISO_8601#Durations
@@ -167,6 +167,6 @@ Returns the aggregate of all the activities for the user for the specified exerc
 * HTTP 200
   * total_duration - [ISO 8601 duration][1], amount of time user has spent in activities of this type
   * total_distance - float, in miles, distance traveled in activities of this type
-  * total_calories - float, calories burned in activities of this type
+  * total_calories - int, calories burned in activities of this type
 
 [1]: https://en.wikipedia.org/wiki/ISO_8601#Durations
