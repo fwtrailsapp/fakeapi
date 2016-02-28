@@ -140,7 +140,7 @@ Returns all of the achievements. The earned date for an achievement will be “n
   * array:
     * name - string
     * description - string
-    * date_earned - ISO 8601 date, null if not earned
+    * date_earned - ISO 8601 date("yyyy-MM-dd"), null if not earned
 
 ## GET /trails/api/1/statistics
 
