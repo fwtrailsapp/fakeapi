@@ -150,7 +150,7 @@ Returns the aggregate of all of the activities for the user.
 
 * HTTP 200
   * account_created_at - ISO 8601 date, time the user opened the account
-  * total_duration - [ISO 8601 duration][1], amount of time user has spent in activities
+  * total_duration - [ISO 8601 duration][1] ("hh:mm:ss"), amount of time user has spent in activities
   * total_distance - float, in miles, distance traveled in activities
   * total_calories - int, calories burned in activities
   * total_achievements - int, number of achieved
