@@ -6,6 +6,14 @@ import simplejson as json
 def index(name):
     return template('<b>Hello {{name}}</b>!', name=name)
 
+@post('/trails/api/1/account/create')
+def acct_create():
+    print(request.json)
+    if not check_required_keys(request.json, ['username', 'password', 'dob',
+        'height', 'weight', 'sex']):
+        response.status = 400
+        return
+
 @post('/trails/api/1/login')
 def login():
     print(request.json)
