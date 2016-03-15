@@ -168,5 +168,17 @@ Returns the aggregate of all the activities for the user for the specified exerc
   * total_duration - [ISO 8601 duration][1], amount of time user has spent in activities of this type
   * total_distance - float, in miles, distance traveled in activities of this type
   * total_calories - int, calories burned in activities of this type
+  * 
+  
+## GET /trails/api/1/statistics
+
+Returns the aggregate of all the activities for every user in the system.
+
+### Response
+
+* HTTP 200
+  * total_recorded - int, total number of activities recorded in the system.
+  * total_duration - [ISO 8601 duration][1], total duration of all activities.
+  * total_distance - float, in miles, total distance traveled for all activities.
 
 [1]: https://en.wikipedia.org/wiki/ISO_8601#Durations
