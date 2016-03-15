@@ -168,7 +168,6 @@ Returns the aggregate of all the activities for the user for the specified exerc
   * total_duration - [ISO 8601 duration][1], amount of time user has spent in activities of this type
   * total_distance - float, in miles, distance traveled in activities of this type
   * total_calories - int, calories burned in activities of this type
-  * 
   
 ## GET /trails/api/1/statistics
 
@@ -180,5 +179,17 @@ Returns the aggregate of all the activities for every user in the system.
   * total_recorded - int, total number of activities recorded in the system.
   * total_duration - [ISO 8601 duration][1], total duration of all activities.
   * total_distance - float, in miles, total distance traveled for all activities.
+
+## GET /trails/api/1/path
+
+Returns all the paths for all the activities in the system. An activity's path is represented as an array of path segments; therefore, this method returns an array of path segments.
+
+### Response
+
+* HTTP 200
+  * array:
+    * segment_id - int, id of the path segment.
+    * path - linestring, coordinates for this path segment.
+    * activity_id - int, id of the activity associated with this segment.
 
 [1]: https://en.wikipedia.org/wiki/ISO_8601#Durations
