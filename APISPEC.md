@@ -62,7 +62,7 @@ This request creates a new account; it does not require an authtoken. You will l
 
 * username - string
 * password - string
-* dob - int, birth year, nullable
+* birthyear - int, nullable
 * weight - float, pounds, nullable
 * sex - string, "male" or "female", nullable
 * height - float, inches, nullable
@@ -79,7 +79,7 @@ Requests the account information of the user. The user's identification is store
 ### Responses
 
 * HTTP 200
-  * dob - int, birth year, nullable
+  * birthyear - int, nullable
   * weight - float, pounds, nullable
   * sex - string, "male" or "female", nullable
   * height - float, inches, nullable
@@ -90,7 +90,7 @@ Modifies the specified fields of the user’s account.
 
 ### Parameters
 
-* dob - int, birth year, nullable
+* birthyear - int, nullable
 * weight - float, pounds, nullable
 * sex - string, "male" or "female", nullable
 * height - float, inches, nullable
